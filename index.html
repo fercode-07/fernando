@@ -1,157 +1,74 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
+           <title>INGRESE</title>
+		   
+<style>
 
-  <meta charset="UTF-8"> 
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
-  
-<style>  
-  
-  nav{
-  
-  text-align: center;
-  background-color: #221f33;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  width: 100%;
+#caja{
 
+  background-color: yellow;
+  border: 4px solid black;
+  width: 50px;
+  height: 50px;
+  transition: width 2s, height 2s;
+  transition-delay: 1s;
+  }
+  
+#saludo{
 
-  
-   	}
-	
-  li{
-  
-  display: inline;
-  padding: 10px;
-  transition: border-radius 1s;
-  background-image: -webkit-linear-gradient(top, #5b5486, #aaa6c1, #5b5486);
-  padding-top: 45px;
-  margin-right: 10px;
-  margin-left: 10px;
-  padding-bottom: 15px;
-  
-  }
-  
-  li:hover{
-    border-radius: 20px;
-  }
-  
-  
-	
-  a{
-  
-  text-align: center;
-  text-decoration: none;
-  font-family: 'Squada One', cursive;
-  color: black;
-  font-size: 50px;
-  
-  }
-  
-
-  section{
-  
-  background-color: #221f33;
-  transition: border-radius 1s; 
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 80%;
-  padding-top: 20px;
-  padding-bottom: 50px;
-  border-radius: 40px;
-  
-  }
-  
-  section:hover{
-  
-  border-radius: 1px;
-  }
-  
-  h2{
-  
-  font-family: Verdana;
-  font-size: 35px;
-  color: #5b5486; 
-  
-  }
-  
-  
-  p{
-  
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 35px;
-  color: #eaeaea;
-  margin-left: 5%;
-  margin-right: 5%;
-  
-  }
-  
-  
-  h1{
-  
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 140px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   color: white;
-
-
+  font-size: 100px;
+  font-family: Arial black;
+  visibility: hidden;
+  margin-top: 180px;
+  transition: visibility 2s;
+  transition-delay: 3s;
   }
   
-</style>  
+#saludoa{
+
+  color: black;
+  font-size: 100px;
+  font-family: Arial black;
+  visibility: hidden;
+  margin-top: -160px;
+  transition: visibility 4s;
+  transition-delay: 4s;
+  }
   
+#entrar{
+
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  font-family: Arial;
+  font-size: 35px;
+  visibility: hidden;
+  transition: visibility 5s;
+  transition-delay: 5s;
+  margin-top: -250px;
+  }
+  
+</style>
 </head>
+<body bgcolor="grey" onload="abrir()">
 
-<body bgcolor="#5b5486">
+<script>
 
-<center><h1> FER  CODE </h1></center>
+function abrir(){
 
-<nav>
+document.getElementById("caja").style.width= "600px";
+document.getElementById("caja").style.height= "600px";
+document.getElementById("saludo").style.visibility= "visible";
+document.getElementById("saludoa").style.visibility= "visible";
+document.getElementById("entrar").style.visibility= "visible";
 
-  <ul>
-   
-    	
-    <li><a href="/es/">INICIO</a></li>
+}
 
-    <li><a href="/es/tutorials.html">TUTORIALES</a></li>
+</script>
 
-    <li><a href="/es/reference.html">REFERENCIAS</a></li>
-
-    <li><a href="/es/reference.html">CONTACTO</a></li>
-
-  </ul><br>
-  
-    <ul>
-   
-    	
-    <li><a href="english.html">PRUEBA 1</a></li>
-
-    <li><a href="/es/tutorials.html">PRUEBA 2</a></li>
-
-    <li><a href="/es/reference.html">PRUEBA 3</a></li>
-
-    <li><a href="english.html">PRUEBA 4</a></li>
-
-   </ul>
-
-</nav>
-
-
-<center><section>
-
-<center><h2> BIENVENIDOS A MI SITIO </h2></center>
-
-<center><p> En este sitio compartire información, fotos y diferentes creaciones hechas por mi.<br>
-Espero que lo disfruten.<br> Gracias por visitarlo!<br> Subiré unas apps que hice muy pronto! :)</p></center>
-            
-
-
-
-</section></center>
+<center><div id="caja"><p id="saludo">HOLA!</p><br><p id="saludoa">MUNDO</p><button id="entrar"  onclick="location.href='indexa.html'">-INGRESE-</button></div></center>
 
 </body>
 </html>
