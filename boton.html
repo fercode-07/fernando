@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+<style>
+
+#caja{
+
+  background-color: yellow;
+  width: 50%;
+  height: 470px;
+  border-radius: 25px;
+  border: 8px solid black;
+  margin-top: 25px;
+  transition: background-color 2s;
+  }
+ 
+#bot{
+
+   background-color: white;
+   border-radius: 25px;
+   width: 100%;
+   height: 50px;
+   margin-top: 15px;
+   }
+ 
+#love{
+
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 130px;
+  color: yellow;
+  margin-top: 5px;
+  }
+
+</style>
+</head>
+<body bgcolor="blue">
+
+<script>
+
+function ver(){
+
+document.getElementById("caja").style.backgroundColor="blue";
+}
+
+function tapar(){
+
+document.getElementById("caja").style.backgroundColor="yellow";
+}
+
+</script>
+
+<center><div id="caja"><p id="love">FER<br>Y<br>YOSE</p></center>
+
+<center><div id="bot" onmouseover="ver()" onmouseout="tapar()"></div></center>
+
+</body>
+</html>
