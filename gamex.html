@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+
+#lienzo{
+	
+	border: 5px solid black;
+	background-color: pink;
+	margin-top: 5px;
+}
+
+#teclas{
+
+margin-top: 10px;
+
+}
+
+button{
+
+font-size: 30px;
+font-family: Arial black;
+background-color: yellow;
+border-radius: 15px;
+
+}
+
+button:hover{
+
+background-color: pink;
+	
+}
+
+h1{
+	
+  font-family: Arial blacK;
+  font-size: 40px;
+  color: white;
+}
+
+</style>
+</head>
+<body bgcolor="#1da1f2">
+
+<script>
+
+var x = 1;
+var y = 1;
+
+var xa = 100;
+var ya = 100;
+var w= 40;
+var e= 40;
+var hor= 40;
+var ver= 40;
+var xdir= 1;
+var ydir= 1;
+var tiempo= 0;
+var contador= 0;
+
+function comenzar(){
+	
+  var elemento = document.getElementById("lienzo");
+  var lienzo = elemento.getContext("2d");
+  lienzo.fillRect(x , y, w, e);
+  lienzo.fillStyle="blue";
+  lienzo.fill();
+
+setInterval(mover,5);
+  
+}
+
+function mover(){
+	
+  var elemento = document.getElementById("lienzo");
+  var lienzo = elemento.getContext("2d");
+  lienzo.clearRect(0, 0, 500, 300);
+  lienzo.fillRect(x , y, w, e);
+  lienzo.fillStyle="blue";
+  lienzo.fill();
+  
+  lienzo.fillRect(xa , ya, hor, ver);
+  lienzo.fillStyle="red";
+  lienzo.fill();
+  
+  document.getElementById("time").innerHTML= "TIEMPO" + " " +tiempo;
+		tiempo+=1;
+		
+
+    x+=xdir;
+    y+=ydir;
+	
+	if(x>=460){
+		xdir-=1;
+	}
+	
+    if(y>=260){
+		ydir-=1;
+	}
+	
+	if(x<=0){
+		xdir+=1;
+	}
+	
+	if(y<=0){
+		ydir+=1;
+		
+	}
+	
+	if(x+hor>=xa && x+hor<=xa+w && y+ver>=ya && y+ver<=ya+e){
+		document.getElementById("text").innerHTML= "PUNTO" + " " +contador;
+		contador+=1;
+	}
+	
+	if(x>=xa && x<=xa+w && y>=ya && y<=ya+e){
+		document.getElementById("text").innerHTML= "PUNTO" + " " +contador;
+		contador+=1;
+	}
+	
+	if(tiempo== 10000){
+	
+	alert("TU PUNTAJE ES" + " " + contador);
+	}
+}
+
+	function up(){
+ 
+        ya-=10;
+  }
+  
+	function down(){
+ 
+        ya+=10;
+  }
+  
+	function left(){
+ 
+        xa-=10;
+  }
+  
+	function right(){
+ 
+        xa+=10;
+  }
+	
+
+window.addEventListener("load", comenzar, false);
+
+</script>
+
+<center><h1 id="text">PUNTOS 0</h1></center>
+
+<center><canvas id="lienzo" width="500" height="300"></canvas></center>
+
+<center><h2 id="time">TIEMPO 0</h2></center>
+
+<div id="teclas">
+<center><button id="arriba" onclick="up()">UP</button></center>
+
+<center><button id="izquierda" onclick="left(); sonar();">LEFT</button><button id="abajo" onclick="down(); sonar();">DOWN</button><button id="derecha" onclick="right(); sonar();">RIGHT</button></center>
+</div>
+
+</body>
+</html>
