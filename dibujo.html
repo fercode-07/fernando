@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Primer canvas</title>
+
+<style>
+
+	#micanvas{
+	
+		background-color: #8fefff;
+		border: 6px solid blue;
+	    padding-left: 0;
+		padding-right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		width: 400px;
+		height: 300px;
+	
+	}
+	
+	p{
+	
+	font-family: Arial;
+	font-size: 30px;
+	color: black;
+	}
+	
+	a{
+	color: white;
+	text-decoration: none;
+	}
+	
+
+
+</style>
+
+<script type="text/javascript">
+window.onload = function() {
+var lienzo=document.getElementById("micanvas");
+var contexto = lienzo.getContext('2d');
+//hojas
+contexto.fillStyle="green";
+contexto.fillRect(75,50,160,110);
+contexto.beginPath();
+contexto.lineWidth=57;
+contexto.moveTo (155,155);
+contexto.strokeStyle="brown";
+contexto.lineTo (155,330);
+contexto.stroke();
+//pasto
+contexto.beginPath()
+contexto.lineWidth=4;
+contexto.moveTo (120,260);
+contexto.strokeStyle="green";
+contexto.lineTo (125,290);
+contexto.stroke();
+contexto.beginPath()
+contexto.lineWidth=4;
+contexto.moveTo (135,260);
+contexto.strokeStyle="green";
+contexto.lineTo (135,290);
+contexto.stroke();
+contexto.beginPath()
+contexto.lineWidth=4;
+contexto.moveTo (145,260);
+contexto.strokeStyle="green";
+contexto.lineTo (145,290);
+contexto.stroke();
+contexto.beginPath()
+contexto.lineWidth=4;
+contexto.moveTo (155,260);
+contexto.strokeStyle="green";
+contexto.lineTo (155,290);
+contexto.stroke();
+contexto.beginPath()
+contexto.lineWidth=4;
+contexto.moveTo (165,260);
+contexto.strokeStyle="green";
+contexto.lineTo (165,290);
+contexto.stroke();
+contexto.beginPath()
+contexto.lineWidth=4;
+contexto.moveTo (175,260);
+contexto.strokeStyle="green";
+contexto.lineTo (175,290);
+contexto.stroke();
+contexto.beginPath();
+contexto.lineWidth=4;
+contexto.moveTo (190,260);
+contexto.strokeStyle="green";
+contexto.lineTo (185,290);
+contexto.stroke();
+
+//pasto
+contexto.beginPath();
+contexto.lineWidth=15;
+contexto.moveTo (0,295);
+contexto.strokeStyle="green";
+contexto.lineTo (400,295);
+contexto.stroke();
+
+//sol
+contexto.beginPath();
+contexto.arc(337,63,50,0,2*Math.PI);
+contexto.fillStyle="yellow";
+contexto.fill();
+
+
+//cabeza
+contexto.beginPath();
+contexto.fillStyle = "#f9de92";
+contexto.lineWidth = 5;
+contexto.arc(320,168,25,0,2*Math.PI);
+contexto.strokeStyle="black";
+contexto.stroke();
+contexto.fill();
+
+//gorro
+contexto.fillStyle="brown";
+contexto.fillRect(295,134,49,15);
+
+contexto.beginPath();
+contexto.lineWidth=4;
+contexto.moveTo (280,151);
+contexto.strokeStyle="brown";
+contexto.lineTo (360,151);
+contexto.stroke();
+
+//ojo derecha
+contexto.beginPath();
+contexto.fillStyle = "white";
+contexto.arc(330,164,6,0,2*Math.PI);
+contexto.strokeStyle="black";
+contexto.stroke();
+contexto.fill();
+
+contexto.beginPath();
+contexto.fillStyle = "green";
+contexto.arc(328,164,3,0,2*Math.PI);
+contexto.fill();
+
+//ojo izquierda
+contexto.beginPath();
+contexto.fillStyle = "white";
+contexto.arc(310,164,6,0,2*Math.PI);
+contexto.strokeStyle="black";
+contexto.stroke();
+contexto.fill();
+
+contexto.beginPath();
+contexto.fillStyle = "green";
+contexto.arc(308,164,3,0,2*Math.PI);
+contexto.fill();
+
+//boca
+contexto.beginPath()
+contexto.lineWidth=2;
+contexto.moveTo (314,185);
+contexto.strokeStyle="black";
+contexto.lineTo (328,182);
+contexto.stroke();
+
+//nariz
+contexto.beginPath()
+contexto.lineWidth=2;
+contexto.moveTo (320,170);
+contexto.strokeStyle="black";
+contexto.lineTo (315,178);
+contexto.lineTo (322,178);
+contexto.stroke();
+
+//tronco (cuerpo)
+contexto.beginPath();
+contexto.lineWidth=40;
+contexto.moveTo (320,195);
+contexto.strokeStyle="#da10ff";
+contexto.lineTo (320,245);
+contexto.stroke();
+
+contexto.beginPath();
+contexto.lineWidth=6;
+contexto.moveTo (320,195);
+contexto.strokeStyle="black";
+contexto.lineTo (320,230);
+contexto.stroke();
+
+contexto.beginPath();
+contexto.lineWidth=40;
+contexto.moveTo (320,238);
+contexto.strokeStyle="black";
+contexto.lineTo (320,250);
+contexto.stroke();
+
+//pierna1
+contexto.beginPath();
+contexto.lineWidth=15;
+contexto.moveTo (310,245);
+contexto.strokeStyle="black";
+contexto.lineTo (310,292);
+contexto.stroke();
+
+contexto.beginPath();
+contexto.lineWidth=10;
+contexto.moveTo (303,288);
+contexto.strokeStyle="brown";
+contexto.lineTo (317,288);
+contexto.stroke();
+
+//pierna2
+contexto.beginPath();
+contexto.lineWidth=15;
+contexto.moveTo (330,245);
+contexto.strokeStyle="black";
+contexto.lineTo (330,292);
+contexto.stroke();
+
+contexto.beginPath();
+contexto.lineWidth=10;
+contexto.moveTo (323,288);
+contexto.strokeStyle="brown";
+contexto.lineTo (338,288);
+contexto.stroke();
+
+
+//brazo1
+contexto.beginPath();
+contexto.lineWidth=16;
+contexto.moveTo (260,200);
+contexto.strokeStyle="#da10ff";
+contexto.lineTo (310,207);
+contexto.stroke();
+
+//brazo2
+contexto.beginPath();
+contexto.lineWidth=15;
+contexto.moveTo (340,200);
+contexto.strokeStyle="#da10ff";
+contexto.lineTo (360,240);
+contexto.stroke();
+
+//mano2
+contexto.beginPath();
+contexto.lineWidth=9;
+contexto.moveTo (360,240);
+contexto.strokeStyle="#f9de92";
+contexto.lineTo (362,245);
+contexto.stroke();
+
+//mano1
+contexto.beginPath();
+contexto.lineWidth=9;
+contexto.moveTo (252,197);
+contexto.strokeStyle="#f9de92";
+contexto.lineTo (261,199);
+contexto.stroke();
+
+}
+
+
+</script>
+
+</head>
+<body bgcolor="pink">
+
+<a href="inicio.html">VOLVER AL INICIO</a>
+
+<center><h1>Dibujo en Códigos</h1></center>
+
+<section>
+<canvas id="micanvas" width="400" height="300">
+ tu navegador no acepta el formato canvas.
+</canvas>
+</section><br>
+
+<center><p>Este dibujo, que puede parecer simple, está hecho a puro código JavaScript, podran analizar que no es una imagen subida. Son números, coordenadas, y comandos.<br>(Basicamente, lo hice escribiendo en lenguaje JavaScript)</p></center>
+
+</body>
+</html>
