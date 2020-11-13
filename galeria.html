@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GALERIA DE FOTOS</title>
+		
+	
+	<style>
+	
+	img{
+	
+	width: 30%;
+	margin-top: 30px;
+	}
+	
+	input{
+	
+	font-size: 50px;
+	background-color: #46b59b;
+	cursor: pointer;
+	width: 250px;
+	
+	}
+	input:hover{
+	color: white;
+	}
+	
+	a{
+	color: white;
+	text-decoration: none;
+		}
+	
+	
+	</style>
+		
+	</head>
+	
+<body bgcolor="#eb452b">
+
+<a href="inicio.html">VOLVER AL INICIO</a>
+
+	<script>
+	
+	var num=1;
+	
+	function adelante(){
+		num++;
+	if(num>4){
+	num=1;}
+		var foto=document.getElementById("foto");
+		foto.src="foto"+num+".jpg";
+		}
+		
+	function atras(){
+		num--;
+		if(num<1){
+		num=4;}
+		var foto=document.getElementById("foto");
+		foto.src="foto"+num+".jpg";
+		}
+		
+	</script>
+
+	<form name="f1">
+		<center><img src="foto1.jpg" id="foto"></center>
+		<center><input type="button" value="<<" onclick="atras()"><input type="button" value=">>" onclick="adelante()"></div></center>
+		
+		
+	
+	</form>
+	
+</body>
+</html>
