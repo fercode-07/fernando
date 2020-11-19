@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=0">
+
+<style>
+
+#lienzo{
+	
+	border: 8px solid black;
+	background-color: #3d619e;
+	margin-top: -10px;
+	}
+
+#teclas{
+
+    margin-top: 5px;
+
+}
+
+.bot{
+
+    font-size: 30px;
+	font-family: Arial black;
+	background-color: yellow;
+	border-radius: 15px;
+
+}
+
+.boto{
+
+	font-size: 30px;
+	font-family: Arial black;
+	background-color: yellow;
+	border-radius: 15px;
+}
+
+img{
+
+	width: 80px;
+	height: 50px;
+	padding-top: 8px;
+}
+
+button:hover{
+
+	background-color: pink;
+	
+}
+
+#pausa{
+
+	font-size: 20px;
+	font-family: Arial black;
+	background-color: white;
+	color: white;
+	margin-left: 10px;
+}
+
+#cargar{
+
+	font-size: 20px;
+	font-family: Arial black;
+	background-color: white;
+	color: white;
+	margin-right: 10px;
+	
+}
+
+
+h1{
+	
+    font-family: Arial black; 
+    font-size: 30px;
+    color: white;
+    background-color: #ff29e9;
+    margin-bottom: 7px;
+	margin-top: -10px;
+}
+
+h2{
+    font-family: Arial; 
+    font-size: 20px;
+    color: black;
+	margin-top: -10;
+	}
+	
+
+</style>
+</head>
+<body bgcolor="#d5feff">
+
+<a href="inicio.html">VOLVER AL INICIO</a>
+
+<script>
+
+var x = 1;
+var y = 1;
+
+var xa = 100;
+var ya = 100;
+var w= 40;
+var e= 40;
+var hor= 40;
+var ver= 40;
+var xdir= 1;
+var ydir= 1;
+var tiempo= 0;
+var contador= 0;
+
+function comenzar(){
+	
+  var elemento = document.getElementById("lienzo");
+  var lienzo = elemento.getContext("2d");
+  lienzo.fillRect(x , y, w, e);
+  lienzo.fillStyle="#29b502";
+  lienzo.fill();
+
+setInterval(mover,5);
+  
+}
+
+function mover(){
+	
+  var elemento = document.getElementById("lienzo");
+  var lienzo = elemento.getContext("2d");
+  lienzo.clearRect(0, 0, 400, 300);
+  lienzo.fillRect(x , y, w, e);
+  lienzo.fillStyle="pink";
+  lienzo.fill();
+  
+  lienzo.fillRect(xa , ya, hor, ver);
+  lienzo.fillStyle="white";
+  lienzo.fill();
+  
+  document.getElementById("time").innerHTML= "TIEMPO" + " " +tiempo;
+		tiempo+=1;
+		
+
+    x+=xdir;
+    y+=ydir;
+	
+	if(x>=320){
+		xdir-=1;
+	}
+	
+    if(y>=220){
+		ydir-=1;
+	}
+	
+	if(x<=0){
+		xdir+=1;
+	}
+	
+	if(y<=0){
+		ydir+=1;
+		
+	}
+	
+	if(x+hor>=xa && x+hor<=xa+w && y+ver>=ya && y+ver<=ya+e){
+		document.getElementById("text").innerHTML= "PUNTOS" + " " +contador;
+		contador+=1;
+	}
+	
+	if(x>=xa && x<=xa+w && y>=ya && y<=ya+e){
+		document.getElementById("text").innerHTML= "PUNTOS" + " " +contador;
+		contador+=1;
+	}
+	
+	if(tiempo== 10000){
+	
+	alert("TU PUNTAJE ES" + " " + contador);
+	location.reload();
+	}
+}
+
+	function up(){
+ 
+        ya-=20;
+  }
+  
+	function down(){
+ 
+        ya+=20;
+  }
+  
+	function left(){
+ 
+        xa-=20;
+  }
+  
+	function right(){
+ 
+        xa+=20;
+  }
+	
+
+window.addEventListener("load", comenzar, false);
+
+function parar(){
+
+ alert("PAUSADO. DESEA CONTINUAR?");
+ }
+
+</script>
+
+<center><h1 id="text">PUNTOS 0</h1></center>
+
+<center><canvas id="lienzo" width="360" height="260"></canvas></center>
+
+<center><h2 id="time">TIEMPO 0</h2></center>
+
+<div id="teclas">
+<center><button id="cargar" onclick="location.reload()"><img src="reload.png"></button><button class="boto" onclick="up()"><img src="up.png"></button><button id="pausa" onclick="parar()"><img src="stop.png"></button></center>
+
+<center><button class="bot" onclick="left()"><img src="left.png"></button><button class="bot" onclick="down()"><img src="down.png"></button><button class="bot" onclick="right()"><img src="right.png"></button></center>
+</div><br>
+
+<center><p>REGLAS: Cliquear las flechas para mover el cuadrado rosa junto al blanco. Cuanto más tiempo se crucen, más puntos acumularás.<br><span>Juego creado para pc y laptop, no para celulares.</span></p></center>
+</body>
+</html>
