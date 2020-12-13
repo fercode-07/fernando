@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+           <title>Estilo</title>
+		   
+<style>
+
+#caja{
+
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border: 8px solid black;
+  margin-top: 100px;
+  border-radius: 20px;
+  transition: background-color 1s; 
+  -webkit-transition: background-color 1s;
+  }
+  
+#uno{
+
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: blue;
+  border: 4px solid black;
+  margin-right: 5px;
+  }
+  
+#dos{
+
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: red;
+  border: 4px solid black;
+  }
+  
+#tres{
+
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: yellow;
+  border: 4px solid black;
+  margin-left: 5px;
+  }
+  
+#balls{
+
+  display: inline-flex;
+  }
+
+h1{
+
+	font-family: Arial Black;
+	font-size: 56px;
+	line-height: 200px;
+	}
+
+</style>
+
+</head>
+<body id="cuerpo" bgcolor="grey">
+
+<script>
+
+ function blue(){
+
+    document.getElementById("caja").style.backgroundColor="blue";
+	}
+	
+  function red(){
+
+    document.getElementById("caja").style.backgroundColor="red";
+	}
+	
+  function yellow(){
+
+    document.getElementById("caja").style.backgroundColor="yellow";
+	}
+	
+  function blueB(){
+
+    document.getElementById("hey").style.color="blue";
+	}
+	
+   function redB(){
+
+    document.getElementById("hey").style.color="red";
+	}
+	
+    function yellowB(){
+
+    document.getElementById("hey").style.color="yellow";
+	}
+
+</script>
+
+<center><div id="caja"><h1 id="hey">F + Y</h1></div></center><br>
+
+<center>
+<div id="balls">
+<div id="uno" onclick="blue()" ondblclick="blueB()"></div><div id="dos" onclick="red()" ondblclick="redB()"></div><div id="tres" onclick="yellow()" ondblclick="yellowB()"></div></center>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
