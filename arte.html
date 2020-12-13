@@ -1,0 +1,114 @@
+<html>
+
+<head>
+
+   <meta charset="utf-8">
+   <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+
+   <title>Yose Fer</title>
+   
+   
+<style>
+
+#pic{
+
+	width: 280px;
+	margin-top: -20px;
+	border: 5px solid white;
+	box-shadow: -5px 5px black;
+	transition: width 4s;
+	-webkit-transition: width 4s;
+	border-radius: 25px;
+	}
+	
+
+header{
+
+	height: 80px;
+	width: auto;
+	margin: auto;
+	background: pink;
+	border: 3px dashed white;
+	margin-bottom: 30px;	
+	border-radius: 50px;
+	}
+	
+header:hover{
+
+	background: white;
+	cursor: pointer;
+	}
+	
+	
+	
+#titulo{
+
+	font-size: 60px;
+	font-family: 'Russo One', sans-serif;
+	color: #14203c;
+	text-align: center;
+	line-height: 3px;	
+	}
+	
+p{
+	font-family: 'Ranchers', cursive;
+	font-size: 40px;
+	color: white;
+	}
+
+
+
+</style>
+
+<script>
+
+function efecto(){
+
+document.getElementById("pic").style.width="200px";
+document.getElementById("titulo").innerHTML="PEQUEÑA";
+}
+
+function efectodos(){
+
+document.getElementById("pic").style.width="280px";
+document.getElementById("titulo").innerHTML="GRANDE";
+}
+
+function cambio(){
+
+document.getElementById("titulo").innerHTML="POR SIEMPRE";
+document.getElementById("sd").play();
+}
+
+
+
+
+
+</script>
+
+</head>
+
+
+
+<body bgcolor="#446ce6">
+
+
+
+
+<header><h1 id="titulo" onclick="cambio()">YOSE Y FER</h1></header>
+
+
+<center><img src="yofe.jpg" id="pic" onclick="efecto()" ondblclick="efectodos()"></center>
+
+<marquee><center><p>HERMOSA PAREJA</p></center></marquee>
+
+
+<audio  id="sd"><source src="fatality.mp3"></audio>
+
+
+</body>
+</html>
