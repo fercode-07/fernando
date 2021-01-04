@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+           <title>COMPITE</title>
+		   <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=0">
+		   
+<style>
+
+#caja{
+	width: 80%;
+	height: 500px;
+	background: linear-gradient(180deg, #1d1d21 0%, #d0d0ff 50%, #1d1d21 100%);
+	border-radius: 35px;
+	border: 5px solid black;
+	display: inline-block;
+	margin-top: 20px;
+	
+	}
+	
+.linea{
+	display: inline-flex;
+	width: 95%;
+	height: 110px;
+	aling-items: center;
+	justify-content: center;
+	margin-top: 12px;
+	}
+	
+#uno{
+	width: 33%;
+	height: 100px;
+	background: radial-gradient(circle, white 0%, #090979 100%);
+	border-radius: 35px;
+	border: 3px solid black;
+	}
+	
+#uno:hover{
+	background: radial-gradient(circle, #090979 0%, #d0d0ff 100%);
+	
+	}
+	
+#dos{
+	width: 33%;
+	height: 100px;
+	background: radial-gradient(circle, white 0%, #090979 100%);
+	border-radius: 35px;
+	border: 3px solid black;
+	margin-left: 20px;
+	margin-right: 20px;
+	}
+	
+	#dos:hover{
+	background: radial-gradient(circle, #090979 0%, #d0d0ff 100%);
+	
+	}
+	
+#tres{
+	width: 33%;
+	height: 100px;
+	background: radial-gradient(circle, white 0%, #090979 100%);
+	border-radius: 35px;
+	border: 3px solid black;
+	}
+	
+	#tres:hover{
+	background: radial-gradient(circle, #090979 0%, #d0d0ff 100%);
+	
+	}
+	
+#cuatro{
+	width: 33%;
+	height: 100px;
+	background: radial-gradient(circle, white 0%, #090979 100%);
+	border-radius: 35px;
+	border: 3px solid black;
+	}
+	
+	#cuatro:hover{
+	background: radial-gradient(circle, #090979 0%, #d0d0ff 100%);
+	
+	}
+	
+#cinco{
+	width: 33%;
+	height: 100px;
+	background: radial-gradient(circle, white 0%, #090979 100%);
+	border-radius: 35px;
+	border: 3px solid black;
+	margin-left: 20px;
+	margin-right: 20px;
+	}
+	
+	#cinco:hover{
+	background: radial-gradient(circle, #090979 0%, #d0d0ff 100%);
+	
+	}
+	
+#seis{
+	width: 33%;
+	height: 100px;
+	background: radial-gradient(circle, white 0%, #090979 100%);
+	border-radius: 35px;
+	border: 3px solid black;
+	}
+	
+	#seis:hover{
+	background: radial-gradient(circle, #090979 0%, #d0d0ff 100%);
+	
+	}
+	
+#siete{
+	width: 33%;
+	height: 100px;
+	background: radial-gradient(circle, white 0%, #090979 100%);
+	border-radius: 35px;
+	border: 3px solid black;
+	}
+	
+	#siete:hover{
+	background: radial-gradient(circle, #090979 0%, #d0d0ff 100%);
+	
+	}
+	
+#ocho{
+	width: 33%;
+	height: 100px;
+	background: radial-gradient(circle, white 0%, #090979 100%);
+	border-radius: 35px;
+	border: 3px solid black;
+	margin-left: 20px;
+	margin-right: 20px;
+	}
+	
+	#ocho:hover{
+	background: radial-gradient(circle, #090979 0%, #d0d0ff 100%);
+	
+	}
+	
+#nueve{
+	width: 33%;
+	height: 100px;
+	background: radial-gradient(circle, white 0%, #090979 100%);
+	border-radius: 35px;
+	border: 3px solid black;
+	}
+	
+	#nueve:hover{
+	background: radial-gradient(circle, #090979 0%, #d0d0ff 100%);
+	
+	}
+	
+#diez{
+	width: 33%;
+	height: 100px;
+	background: radial-gradient(circle, white 0%, #090979 100%);
+	border-radius: 35px;
+	border: 3px solid black;
+	}
+	
+	#diez:hover{
+	background: radial-gradient(circle, #090979 0%, #d0d0ff 100%);
+	
+	}
+	
+#once{
+	width: 33%;
+	height: 100px;
+	background: radial-gradient(circle, white 0%, #090979 100%);
+	border-radius: 35px;
+	border: 3px solid black;
+	margin-left: 20px;
+	margin-right: 20px;
+	}
+	
+	#once:hover{
+	background: radial-gradient(circle, #090979 0%, #d0d0ff 100%);
+	
+	}
+	
+#doce{
+	width: 33%;
+	height: 100px;
+	background: radial-gradient(circle, white 0%, #090979 100%);
+	border-radius: 35px;
+	border: 3px solid black;
+	}
+	
+	#doce:hover{
+	background: radial-gradient(circle, #090979 0%, #d0d0ff 100%);
+	
+	}
+
+
+
+
+</style>
+
+
+
+</head>
+<body bgcolor="#3b3bff">
+
+<script>
+
+var colorx= ["red", "#40e242"];
+
+function change(){
+
+document.getElementById("uno").style.background= colorx[Math.floor(Math.random()*colorx.length)];
+
+document.getElementById("sd").play();
+}
+
+function changeb(){
+
+document.getElementById("dos").style.background= colorx[Math.floor(Math.random()*colorx.length)];
+
+document.getElementById("sd").play();
+}
+
+function changec(){
+
+document.getElementById("tres").style.background= colorx[Math.floor(Math.random()*colorx.length)];
+
+document.getElementById("sd").play();
+}
+
+function changed(){
+
+document.getElementById("cuatro").style.background= colorx[Math.floor(Math.random()*colorx.length)];
+
+document.getElementById("sd").play();
+}
+
+function changee(){
+
+document.getElementById("cinco").style.background= colorx[Math.floor(Math.random()*colorx.length)];
+
+document.getElementById("sd").play();
+}
+
+function changef(){
+
+document.getElementById("seis").style.background= colorx[Math.floor(Math.random()*colorx.length)];
+
+document.getElementById("sd").play();
+}
+
+function changeg(){
+
+document.getElementById("siete").style.background= colorx[Math.floor(Math.random()*colorx.length)];
+
+document.getElementById("sd").play();
+}
+
+function changeh(){
+
+document.getElementById("ocho").style.background= colorx[Math.floor(Math.random()*colorx.length)];
+
+document.getElementById("sd").play();
+}
+
+function changei(){
+
+document.getElementById("nueve").style.background= colorx[Math.floor(Math.random()*colorx.length)];
+
+document.getElementById("sd").play();
+}
+
+function changej(){
+
+document.getElementById("diez").style.background= colorx[Math.floor(Math.random()*colorx.length)];
+
+document.getElementById("sd").play();
+}
+
+function changek(){
+
+document.getElementById("once").style.background= colorx[Math.floor(Math.random()*colorx.length)];
+
+document.getElementById("sd").play();
+}
+
+function changel(){
+
+document.getElementById("doce").style.background= colorx[Math.floor(Math.random()*colorx.length)];
+
+document.getElementById("sd").play();
+}
+
+</script>
+
+<center><section id="caja">
+
+<div class="linea">
+<div id="uno" onclick="change()"></div><div id="dos" onclick="changeb()"></div><div id="tres" onclick="changec()"></div>
+</div>
+
+<div class="linea">
+<div id="cuatro" onclick="changed()"></div><div id="cinco" onclick="changee()"></div><div id="seis" onclick="changef()"></div>
+</div>
+
+<div class="linea">
+<div id="siete" onclick="changeg()"></div><div id="ocho" onclick="changeh()"></div><div id="nueve" onclick="changei()"></div>
+</div>
+
+<div class="linea">
+<div id="diez" onclick="changej()"></div><div id="once" onclick="changek()"></div><div id="doce" onclick="changel()"></div>
+</div>
+
+</section></center>
+
+<audio id="sd"><source src="plop.mp3"></audio>
+
+</body>
+</html>
