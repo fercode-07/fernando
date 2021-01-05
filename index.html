@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+           <title>INGRESE</title>
+		   
+<style>
+
+#caja{
+
+  background-color: #fb627d;
+  border: 8px solid #bb0ec1;
+  width: 50px;
+  height: 50px;
+  transition: width 2s, height 2s;
+  transition-delay: 1s;
+  }
+  
+#saludo{
+
+  color: white;
+  font-size: 130px;
+  font-family: Arial black;
+  visibility: hidden;
+  margin-top: 120px;
+  margin-bottom: -180px;
+  transition: visibility 2s;
+  transition-delay: 3s;
+  }
+  
+#saludoa{
+
+  color: #052939;
+  font-size: 105px;
+  font-family: Arial black;
+  margin-bottom: 70px;
+  visibility: hidden;
+  transition: visibility 4s;
+  transition-delay: 4s;
+  }
+  
+#entrar{
+
+  background-color: #1cc6c7;
+  color: white;
+  border-radius: 10px;
+  font-family: Arial black;
+  font-size: 65px;
+  visibility: hidden;
+  transition: visibility 5s;
+  transition-delay: 5s;
+  margin-top: -270px;
+  }
+  
+#entrar:hover{
+
+  cursor: pointer;
+  background-color: black;
+  }
+  
+</style>
+</head>
+<body bgcolor="#1cc6c7" onload="abrir()">
+
+<script>
+
+function abrir(){
+
+document.getElementById("caja").style.width= "90%";
+document.getElementById("caja").style.height= "590px";
+document.getElementById("saludo").style.visibility= "visible";
+document.getElementById("saludoa").style.visibility= "visible";
+document.getElementById("entrar").style.visibility= "visible";
+
+}
+
+</script>
+
+<center><div id="caja"><p id="saludo">HOLA!</p><br><p id="saludoa">MUNDO</p><button id="entrar"  onclick="location.href='inicio.html'">INGRESE</button></div></center>
+
+
+</body>
+</html>
