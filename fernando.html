@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+           <title>ACERCA DE MI</title>
+		   <meta charset="UTF-8">
+		   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+		   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+		   
+<style>
+
+h1{
+
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 60px;
+  color: #fcedd8;
+  margin-top: 25px;
+  
+}
+
+img{
+
+  width: 70%;
+  margin-top: -20px;
+  border: 4px solid black;
+
+  }
+  
+p{
+
+  color: #fcedd8;
+  font-size: 55px;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+  
+
+</style>
+</head>
+<body bgcolor= "#6d24fb" onload="efecto()">
+
+<a href="inicio.html">VOLVER AL INICIO</a>
+
+<center><h1>ACERCA DE MI</h1></center>
+
+<center><img id="pic" src="capototal.jpg"></center>
+
+<script>
+
+function efecto(){
+
+
+
+gsap.from('#pic',{
+y: 70,
+x: 0,
+rotate: 0,
+width: 50,
+});
+
+gsap.to('#pic',{
+duration: 2,
+y: 0,
+x: 0,
+
+//rotate: 900,
+ease: Bounce.easeOut,
+});
+}
+
+</script>
+
+<p>Mi nombre es Fernando Codesal, tengo 33 años y soy de Montevideo, Uruguay.<br>Soy un apasionado de la programación, tanto desarrollo y diseño web, como aplicaciones web en general. Actualmente orientado a front-end, certificado por la University of London. Aspiro a lograr grandes cosas en este maravilloso mundo. Aquí tendran la oportunidad de ver algunas cuantas de mis creaciones.</p>
+
+
+</body>
+</html>
